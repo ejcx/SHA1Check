@@ -49,10 +49,10 @@ func main() {
                         names = j.Subject.CommonName
                 }
                 if (j.SignatureAlgorithm == x509.SHA1WithRSA){
-                        if yellow {
+                        if red {
                                 fmt.Printf("\033[37m%s: \033[33mSecure with minor errors\n", names) 
                                 chainyellow = chainyellow || yellow
-                        } else if red {
+                        } else if yellow{
                                 fmt.Printf("\033[37m%s: \033[31mInsecure\n", names)
                                 chainred = chainred || red
                         }
